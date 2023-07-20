@@ -1,18 +1,18 @@
 'use client'
-import React from 'react'
+import React, { SetStateAction } from 'react'
 import {SearchManufacturer} from './'
 import { useState } from 'react'
 import Image from 'next/image'
-import { useRouter } from 'next/navigation'
+// import { useRouter } from 'next/navigation'
 const SearchButton = ({ otherClasses } : {otherClasses: string}) => (
   <button type='submit' className={`-ml-3 z-10 ${otherClasses}`}>
     <Image src='magnifying-glass.svg' alt='magnifyng glass' width={40} height={40} className='object-contain' />
   </button>
 )
-const SearchBar = ({setManufacturer, setModel}) => {
+const SearchBar = ({setManufacturer, setModel} : {setManufacturer: React.Dispatch<SetStateAction<any>>, setModel: React.Dispatch<SetStateAction<any>>}) => {
   const
-  router = useRouter()
-  , [searchManufacturer, setSearchManufacturer] = useState('')
+  // router = useRouter()
+  [searchManufacturer, setSearchManufacturer] = useState('')
   , [searchModel, setSearchModel] = useState('')
   , handleSearch = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()

@@ -18,7 +18,7 @@ export default function Home({ searchParams } : HomeProps) {
   // pagination
   , [limit, setLimit] = useState(10)
 
-  , isDataEmpty = !Array.isArray(allCars) || allCars.length <1 || !allCars
+  // , isDataEmpty = !Array.isArray(allCars) || allCars.length <1 || !allCars
   , getCars = async () => {
     setLoading(true)
     try {
@@ -55,7 +55,7 @@ export default function Home({ searchParams } : HomeProps) {
         {allCars.length > 0
           ? <section>
             <div className='home__cars-wrapper'>
-              {allCars?.map(car => <CarCard car={car} />)}
+              {allCars?.map(car => <CarCard key={Math.random()} car={car} />)}
             </div>
 
             {loading && (<div className='mt-16 w-full flex-center'>
