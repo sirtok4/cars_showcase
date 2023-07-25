@@ -7,7 +7,7 @@ import Image from 'next/image'
 import { useEffect, useState } from 'react'
 export default function Home({ searchParams } : HomeProps) {
   const 
-  [allCars, setAllCars] = useState([])
+  [allCars, setAllCars] = useState<any[]>([])
   , [loading, setLoading] = useState(false)
   // search states
   , [manufacturer, setManufacturer] = useState("")
