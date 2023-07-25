@@ -7,7 +7,7 @@ import Image from 'next/image'
 import { useEffect, useState } from 'react'
 export default function Home({ searchParams } : HomeProps) {
   const 
-  [allCars, setAllCars] = useState<any[]>([])
+  [allCars, setAllCars] = useState([])
   , [loading, setLoading] = useState(false)
   // search states
   , [manufacturer, setManufacturer] = useState("")
@@ -69,7 +69,7 @@ export default function Home({ searchParams } : HomeProps) {
           </section>
           : <div className='home__error-container'>
               <h2 className='text-black text-xl font-bold'>Oops, no results</h2>
-              <p>{allCars?.message}</p>
+              {/* <p>{allCars?.message}</p> */}
           </div>
         }
           
