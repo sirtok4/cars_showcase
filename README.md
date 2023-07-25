@@ -4,7 +4,7 @@ A simple Car Showcase web application using one of the latest technologies avail
 
 ## Demo
 
-- [Checkout the Demo here](https://nextjs.org/docs)
+- [Checkout the Demo here](https://cars-showcase-xy4r.vercel.app/)
 
 ## Would you like to hire my services?
 
